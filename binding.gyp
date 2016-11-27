@@ -5,10 +5,10 @@
       'sources': [ 'node-icu-charset-detector.cpp' ],
       'cflags!': [ '-fno-exceptions', '`icu-config --cppflags`' ],
       'cflags_cc!': [ '-fno-exceptions' ],
-      'libraries': [ '`icu-config --detect-prefix --ldflags`' ],
       'include_dirs': [ "<!(node -e \"require('nan')\")" ],
       'conditions': [
         ['OS=="mac"', {
+          'libraries': [ '`icu-config --detect-prefix --ldflags`' ],
           'include_dirs': [
               '/opt/local/include',
               '/usr/local/include'
