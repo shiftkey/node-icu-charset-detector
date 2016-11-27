@@ -16,6 +16,11 @@
           'xcode_settings': {
             'GCC_ENABLE_CPP_EXCEPTIONS': 'YES'
           }
+        }],
+        ['OS=="win"', {
+          'include_dirs': [
+            'external/include'
+          ],
         }]
       ]
     }
