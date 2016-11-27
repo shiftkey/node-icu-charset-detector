@@ -21,6 +21,9 @@
           'include_dirs': [
             'external/include'
           ],
+          'libraries': [
+            '../external/lib64/icuin.lib'
+          ]
         }]
       ]
     }
