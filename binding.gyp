@@ -19,10 +19,10 @@
         }],
         ['OS=="win"', {
           'include_dirs': [
-            'external/include'
+            'external/win32/icu/include'
           ],
           'libraries': [
-            '../external/lib64/icuin.lib'
+            '../external/win32/icu/lib64/icuin.lib'
           ]
         }]
       ]

@@ -7,6 +7,9 @@
     "charset-detection",
     "icu"
   ],
+  "scripts": {
+    "install": "node ./bootstrap.js && node-gyp rebuild"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/mooz/node-icu-charset-detector.git"
@@ -28,5 +31,10 @@
   },
   "dependencies": {
     "nan": "^2.3.3"
+  },
+  "devDependencies": {
+    "decompress": "^4.0.0",
+    "mkdirp": "^0.5.1",
+    "request": "^2.79.0"
   }
 }

@@ -3,3 +3,5 @@ build/*
 .lock-wscript
 */.dir-locals.el
 npm-debug.log
+
+external
