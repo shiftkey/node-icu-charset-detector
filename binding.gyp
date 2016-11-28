@@ -8,10 +8,13 @@
       'include_dirs': [ "<!(node -e \"require('nan')\")" ],
       'conditions': [
         ['OS=="mac"', {
-          'libraries': [ '`icu-config --detect-prefix --ldflags`' ],
           'include_dirs': [
-              '/opt/local/include',
-              '/usr/local/include'
+            'external/darwin/usr/local/include'
+          ],
+          'libraries': [
+            '../external/darwin/usr/local/lib/libicui18n.a',
+            '../external/darwin/usr/local/lib/libicuuc.a',
+            '../external/darwin/usr/local/lib/libicudata.a'
           ],
           'xcode_settings': {
             'GCC_ENABLE_CPP_EXCEPTIONS': 'YES'

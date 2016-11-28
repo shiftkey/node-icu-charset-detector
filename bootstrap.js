@@ -32,7 +32,9 @@ mkdirp(config.outputPath, function (error) {
   var fullUrl = ''
 
   if (process.platform === 'win32') {
-    fullUrl = 'http://download.icu-project.org/files/icu4c/52.1/icu4c-52_1-Win64-msvc10.zip'
+    fullUrl = 'https://ssl.icu-project.org/files/icu4c/58.1/icu4c-58_1-Win64-MSVC2015.zip'
+  } else if (process.platform === 'darwin') {
+    fullUrl = 'https://ssl.icu-project.org/files/icu4c/58.1/icu4c-58_1-AIX7_1-VA2.tgz'
   } else {
     console.error('Platform \'' + process.platform +'\' not supported')
     process.exit(1)
