@@ -1,0 +1,23 @@
+os: Visual Studio 2015
+
+platform:
+  - x64
+
+environment:
+  nodejs_version: "6"
+  icu_download: "http://download.icu-project.org/files/icu4c/58.2/icu4c-58_2-Win64-MSVC2015.zip"
+
+cache:
+  - node_modules -> appveyor.yml
+  - external\icu4c-win.zip -> script/appveyor.ps1
+
+skip_branch_with_pr: true
+
+install:
+  - ps: Install-Product node $env:nodejs_version x64
+  - npm install -g npm
+  - ps: .\script\appveyor.ps1
+  - ps: $env:ICU_DIRECTORY="$env:APPVEYOR_BUILD_FOLDER\external\icu\"
+
+build_script:
+  - npm install
