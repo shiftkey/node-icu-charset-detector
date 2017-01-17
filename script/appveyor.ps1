@@ -1,6 +1,6 @@
 if ($env:APPVEYOR -eq "True") {
   $external = "$env:APPVEYOR_BUILD_FOLDER\external"
-  New-Item $external -ItemType Directory
+  New-Item $external -ItemType Directory -Force
 
   $file = "icu4c-win.zip"
   $location = "$external\icu4c-win.zip"
