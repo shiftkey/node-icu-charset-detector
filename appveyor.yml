@@ -21,3 +21,4 @@ install:
 
 build_script:
   - npm install
+  - npm test
