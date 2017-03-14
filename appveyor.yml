@@ -4,7 +4,7 @@ platform:
   - x64
 
 environment:
-  nodejs_version: "6"
+  nodejs_version: "7"
   icu_download: "http://download.icu-project.org/files/icu4c/58.2/icu4c-58_2-Win64-MSVC2015.zip"
 
 cache:
