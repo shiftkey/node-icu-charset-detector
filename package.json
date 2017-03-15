@@ -12,7 +12,8 @@
     "url": "git://github.com/mooz/node-icu-charset-detector.git"
   },
   "scripts": {
-    "test": "mocha tests/*.js"
+    "test": "mocha tests/*.js",
+    "preinstall": "node ./script/download-icu.js"
   },
   "homepage": "http://github.com/mooz/node-icu-charset-detector",
   "bugs": "http://github.com/mooz/node-icu-charset-detector/issues",
@@ -30,6 +31,11 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^3.2.0"
+    "checksum": "^0.1.1",
+    "mkdirp": "^0.5.1",
+    "mocha": "^3.2.0",
+    "os-tmpdir": "^1.0.2",
+    "progress": "^1.1.8",
+    "request": "^2.81.0"
   }
 }
